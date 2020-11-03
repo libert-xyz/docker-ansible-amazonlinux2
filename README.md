@@ -1,4 +1,12 @@
 
+# Dockerfile AmazonLinux2 Ansible
+
+[![Docker Automated build](https://img.shields.io/docker/automated/libertxyz/docker-ansible-amazonlinux2.svg?maxAge=2592000)](https://hub.docker.com/r/libertxyz/docker-amazonlinux2-ansible/)
+
+
+
+[![Build Status](https://travis-ci.com/libert-xyz/docker-ansible-amazonlinux2.svg?branch=master)](https://travis-ci.com/libert-xyz/docker-ansible-amazonlinux2)
+
 ## How to Use
 
 ## Local
@@ -19,6 +27,10 @@ You can add the Docker image as part of Molecule
 platforms:
   - name: instance
     image: libertxyz/docker-ansible-amazonlinux2:latest
+    command: /sbin/init
+    tmpfs:
+      - /run
+      - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 ```
