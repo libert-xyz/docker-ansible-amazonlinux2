@@ -8,7 +8,6 @@ RUN yum makecache fast \
  && yum -y update \
  && yum -y install \
       sudo \
-      which \
       python-pip \
  && yum clean all
 
@@ -23,6 +22,6 @@ RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 #Systemd init -- https://hub.docker.com/_/centos/
 VOLUME ["/sys/fs/cgroup"]
-CMD ["/usr/sbin/init"]
+CMD ["/sbin/init"]
 
 

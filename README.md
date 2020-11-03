@@ -15,13 +15,13 @@
 
 You can add the Docker image as part of Molecule
 
-`
+```yaml
 platforms:
   - name: instance
     image: libertxyz/docker-ansible-amazonlinux2:latest
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
-`
+```
 
 ## Notes
 
@@ -29,5 +29,4 @@ This container is only intented to use to test Ansible Roles and Playbooksm not 
 
 ## Author
 
-Libert R Schmidt
-2020
+Libert R Schmidt - 2020
