@@ -1,7 +1,10 @@
 
 # Dockerfile AmazonLinux2 Ansible
 
-[![Docker Automated build](https://img.shields.io/docker/automated/libertxyz/docker-ansible-amazonlinux2.svg?maxAge=2592000)](https://hub.docker.com/r/libertxyz/docker-amazonlinux2-ansible/)
+[![Docker Automated build](https://img.shields.io/docker/automated/libertxyz/docker-ansible-amazonlinux2.svg?maxAge=2592000)](https://hub.docker.com/r/libertxyz/docker-ansible-amazonlinux2)
+
+
+[![CI](https://github.com/libert-xyz/docker-ansible-amazonlinux2/workflows/Build/badge.svg?branch=master&event=push)](https://github.com/libert-xyz/docker-ansible-amazonlinux2/actions?query=workflow%3ABuild)
 
 
 
@@ -33,6 +36,11 @@ platforms:
       - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: True
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
 ```
 
 ## Notes
